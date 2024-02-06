@@ -13,7 +13,7 @@ class LogTransformer(TransformerMixin):
 
     def transform(self, X, y=None):
         for feature in self.features:
-            X[feature] = np.log(X[feature])
+            X[feature] = np.log1p(X[feature])
         return X
 
 
